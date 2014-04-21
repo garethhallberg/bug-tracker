@@ -22,3 +22,41 @@ a.undecorated-link:hover {
 .list-group.li { padding-left: 1em; margin:1em;  }
 
 ul {-webkit-padding-start: 0px;}
+
+
+/*.bugs-animation*/
+/*.bugs-animation.ng-move*/
+
+.bugs-animation.ng-enter,
+.bugs-animation.ng-leave{
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+    position:relative;
+}
+
+.bugs-animation.ng-enter {
+    /*left:-10px;*/
+    opacity:0;
+}
+.bugs-animation.ng-enter.ng-enter-active {
+    /*left:0;*/
+    opacity:1;
+}
+
+.bugs-animation.ng-leave {
+    /*left:0;*/
+    /*height: 0px;*/
+    opacity:1;
+}
+.bugs-animation.ng-leave.ng-leave-active {
+    /*left:-10px;*/
+    opacity:0;
+}
+
+/*.bugs-animation.ng-move {*/
+    /*opacity:1.0;*/
+/*}*/
+/*.bugs-animation.ng-move.ng-move-active {*/
+    /*opacity:1;*/
+/*}*/
+

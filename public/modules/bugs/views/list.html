@@ -4,10 +4,10 @@
     </div>
     <div class="list-group">
         <h2 class="green">Done bugs</h2>
-        <ul>
-        <li data-ng-repeat="bug in bugs | filter:filterDoneBugs" data-ng-href="#!/bugs/{{bug._id}}" class="list-group-item">
+        <!--<ul>-->
+        <div data-ng-repeat="bug in bugs | filter:filterDoneBugs" data-ng-href="#!/bugs/{{bug._id}}" class="bugs-animation list-group-item">
             <div class="row " >
-                <div class="col-md-9">
+                <div class="col-md-9 ">
                     <small class="list-group-item-text">{{bug.created | date:'d/M/yy'}} / {{bug.user.displayName}}</small>
                     <h4 class="list-group-item-heading">{{bug.name}}</h4>
                 </div>
@@ -16,13 +16,13 @@
                     <button class="btn btn-default" ng-click="remove(bug)">remove</button>
                 </div>
             </div>
-        </li>
-        </ul>
+        </div>
+        <!--</ul>-->
     </div>
     <div class="list-group ">
         <h2 class="red">Fresh bugs</h2>
         <ul>
-            <li data-ng-repeat="bug in bugs | filter:!filterDoneBugs" data-ng-href="#!/bugs/{{bug._id}}" class="list-group-item ">
+            <li data-ng-repeat="bug in bugs | filter:!filterDoneBugs" data-ng-href="#!/bugs/{{bug._id}}" class="bugs-animation list-group-item">
                 <div class="row ">
                     <div class="col-md-9 ">
                         <small class="list-group-item-text ">{{bug.created | date:'medium'}} / {{bug.user.displayName}} </small>
